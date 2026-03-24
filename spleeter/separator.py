@@ -31,7 +31,7 @@ from .audio.adapter import AudioAdapter
 from .audio.convertor import to_stereo
 from .model import EstimatorSpecBuilder, InputProviderFactory, model_fn
 from .model.provider import ModelProvider
-from .types import AudioDescriptor
+from .typedefs import AudioDescriptor
 from .utils.configuration import load_configuration
 
 # pylint: enable=import-error

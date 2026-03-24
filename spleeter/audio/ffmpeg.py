@@ -20,7 +20,7 @@ import ffmpeg  # type: ignore
 import numpy as np
 
 from .. import SpleeterError
-from ..types import Signal
+from ..typedefs import Signal
 from ..utils.logging import logger
 from . import Codec
 from .adapter import AudioAdapter
@@ -98,6 +98,7 @@ class FFMPEGProcessAudioAdapter(AudioAdapter):
         if not isinstance(path, str):
             path = path.decode()
         try:
+            logger.info(f"ffmpeg probe: {path}")
             probe = ffmpeg.probe(path)
         except ffmpeg._run.Error as e:
             raise SpleeterError(

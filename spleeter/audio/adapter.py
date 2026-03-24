@@ -16,7 +16,7 @@ import tensorflow as tf  # type: ignore
 from spleeter.audio import Codec
 
 from .. import SpleeterError
-from ..types import AudioDescriptor, Signal
+from ..typedefs import AudioDescriptor, Signal
 from ..utils.logging import logger
 
 # pylint: enable=import-error
